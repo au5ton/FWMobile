@@ -35,3 +35,7 @@ local.properties
 node_modules
 *.log
 .nvm
+
+FWMobile/Pods/
+
+Podfile.lock

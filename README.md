@@ -1,2 +1,2 @@
 # FWMobile
-FW React Native app
+FW iOS app
