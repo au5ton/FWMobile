@@ -1,8 +1,9 @@
 var React = require('react-native');
 
-var Login = require('./Login');
+//var Login = require('./Login');
 
 var {
+    AppRegistry,
     StyleSheet,
     Text,
     Image,
@@ -10,22 +11,10 @@ var {
     View
 } = React;
 
-var Main = React.createClass({
-
-    _onPressButton: function() {
-            this.props.navigator.push(Login);
-    },
-
+class Main extends React.Component {
     render() {
-        return (
-            <NavigatorIOS
-                ref='nav'
-                initialRoute = {{
-                    title: 'FW Mobile',
-                    component: Main
-                }}
-            />
 
+        return (
             <View style={styles.container}>
 
             <Image
@@ -40,16 +29,10 @@ var Main = React.createClass({
             To get started, you must already be a registered user of FW.
             </Text>
 
-            <TouchableHighlight onPress={this._onPressButton}>
-              <Text style={styles.getstarted}>
-                Get started
-              </Text>
-            </TouchableHighlight>
-
             </View>
-        )
+        );
     }
-});
+}
 
 var styles = StyleSheet.create({
     container: {
@@ -82,6 +65,14 @@ var styles = StyleSheet.create({
     }
 
 });
+
+/*
+<TouchableHighlight onPress={this._onPressButton}>
+  <Text style={styles.getstarted}>
+    Get started
+  </Text>
+</TouchableHighlight>
+*/
 
 
 module.exports = Main;

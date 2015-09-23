@@ -11,7 +11,9 @@ var Main = require('./App/Components/Main');
 var {
     AppRegistry,
     StyleSheet,
-    NavigatorIOS
+    NavigatorIOS,
+    Text,
+    View
 } = React;
 
 var styles = StyleSheet.create({
@@ -21,17 +23,19 @@ var styles = StyleSheet.create({
     }
 });
 
-class FWMobile extends React.Component {
+class FWMobile extends React.Component{
     render() {
         return (
+
             <NavigatorIOS
-                initialRoute = {{
+                style={styles.container}
+                initialRoute={{
                     title: 'FW Mobile',
                     component: Main
-                }}
-            />
+                }} />
+
         )
     }
-}
+};
 
 AppRegistry.registerComponent('FWMobile', () => FWMobile);
