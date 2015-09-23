@@ -1,5 +1,7 @@
 var React = require('react-native');
 
+var Login = require('./Login');
+
 var {
     StyleSheet,
     Text,
@@ -8,9 +10,22 @@ var {
     View
 } = React;
 
-class Main extends React.Component {
+var Main = React.createClass({
+
+    _onPressButton: function() {
+            this.props.navigator.push(Login);
+    },
+
     render() {
         return (
+            <NavigatorIOS
+                ref='nav'
+                initialRoute = {{
+                    title: 'FW Mobile',
+                    component: Main
+                }}
+            />
+
             <View style={styles.container}>
 
             <Image
@@ -34,7 +49,7 @@ class Main extends React.Component {
             </View>
         )
     }
-}
+});
 
 var styles = StyleSheet.create({
     container: {

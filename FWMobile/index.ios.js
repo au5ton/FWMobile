@@ -25,7 +25,6 @@ class FWMobile extends React.Component {
     render() {
         return (
             <NavigatorIOS
-                style={styles.container}
                 initialRoute = {{
                     title: 'FW Mobile',
                     component: Main

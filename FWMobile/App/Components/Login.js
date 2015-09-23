@@ -1,43 +1,25 @@
-/**
-* Sample React Native App
-* https://github.com/facebook/react-native
-*/
-'use strict';
-
 var React = require('react-native');
+
 var {
-    AppRegistry,
     StyleSheet,
     Text,
     Image,
     TouchableHighlight,
     View,
-    NavigatorIOS
+    TextInput
 } = React;
 
 var Login = React.createClass({
-    render: function() {
+    render() {
         return (
-
-
-
             <View style={styles.container}>
 
             <Text style={styles.headline}>
-            My new sign in page
+            Login
             </Text>
-            <Text style={styles.instructions}>
-            Lets get you signed in
-            </Text>
-
-            <TouchableHighlight onPress={this._onPressButton}>
-              <Text style={styles.getstarted}>
-                Login
-              </Text>
-            </TouchableHighlight>
 
             </View>
-        );
+        )
     }
 });
 
@@ -48,9 +30,6 @@ var styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
         padding: 15
-    },
-    icon : {
-        marginBottom: 20,
     },
     headline: {
         fontSize: 36,
@@ -73,4 +52,5 @@ var styles = StyleSheet.create({
 
 });
 
-AppRegistry.registerComponent('Login', () => Login);
+
+module.exports = Login;
