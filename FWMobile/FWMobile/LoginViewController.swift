@@ -11,34 +11,6 @@ import Alamofire
 import SwiftyJSON
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let tapView = UITapGestureRecognizer(target: self, action: "tapView")
-        self.view.addGestureRecognizer(tapView)
-        
-        usernameTextField.delegate = self
-        activityIndicator.alpha = 0
-        
-        FW_Mobile.session = "PHPSESSID=1moigfojmumjc6khnsv4butvq0"
-
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func tapView() {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -46,7 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginButtonPressed(sender: UIButton) {
         
-        if(usernameTextField.hasText() && passwordTextField.hasText()) {
+        if usernameTextField.hasText() && passwordTextField.hasText() {
             self.activityIndicator.alpha = 1
         
             //Can't get Session ID from this, see current development workaround in viewDidLoad()
@@ -73,19 +45,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             */
     
             }
-        }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tapView = UITapGestureRecognizer(target: self, action: "tapView")
+        view.addGestureRecognizer(tapView)
+        
+        usernameTextField.delegate = self
+        activityIndicator.alpha = 0
+        
+        FW_Mobile.session = "PHPSESSID=1moigfojmumjc6khnsv4butvq0"
         
     }
 
-
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    */
+
+    func tapView() {
+        self.view.endEditing(true)
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

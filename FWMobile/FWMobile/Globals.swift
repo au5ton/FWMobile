@@ -9,5 +9,5 @@
 import Foundation
 
 
-let host = "http://108.197.28.233"
-var session = ""
+public let host = "http://108.197.28.233"
+public var session = ""

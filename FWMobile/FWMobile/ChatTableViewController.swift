@@ -11,53 +11,42 @@ import Alamofire
 
 class ChatTableViewController: UITableViewController {
 
-    var chatHistory: String = ""
+    var chatHistory = ""
+    var historyArray = [String: String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.GET, FW_Mobile.host+"/api/chat_messages.php", headers: ["Cookie": session])
+        Alamofire.request(.GET, FW_Mobile.host + "/api/chat_messages.php", headers: ["Cookie": session])
             .responseJSON { response in
-                print("Response JSON: \(response.2.value!)") //We got the chat messages!
+                if let JSON = response.2.value {
+                    print("Response JSON: \(JSON)") //We got the chat messages!
+                }
                 
                 //Next up, populating a TableView
                 
-                
-            }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return historyArray.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,16 +80,6 @@ class ChatTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     */
 
