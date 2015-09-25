@@ -15,6 +15,8 @@
 		D9B33C671BB3533700DB5E15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C661BB3533700DB5E15 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D9CADBE41BB3658900144942 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D9CADBE31BB3658900144942 /* Podfile */; settings = {ASSET_TAGS = (); }; };
 		D9D1A9391BB3695F0035048D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D1A9381BB3695F0035048D /* Alamofire.framework */; };
+		D9F009F01BB5224A00FD49F4 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F009EF1BB5224A00FD49F4 /* ChatTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D9F009F21BB5235100FD49F4 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F009F11BB5235100FD49F4 /* Globals.swift */; settings = {ASSET_TAGS = (); }; };
 		D9F101291BB4C4A3005CDE8E /* AUTOMANI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D9F101281BB4C4A3005CDE8E /* AUTOMANI.TTF */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		D9B33C661BB3533700DB5E15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D9CADBE31BB3658900144942 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D9D1A9381BB3695F0035048D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		D9F009EF1BB5224A00FD49F4 /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTableViewController.swift; path = ../ChatTableViewController.swift; sourceTree = "<group>"; };
+		D9F009F11BB5235100FD49F4 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		D9F101281BB4C4A3005CDE8E /* AUTOMANI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AUTOMANI.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,8 +127,10 @@
 		D9B33C351BB3436300DB5E15 /* FWMobile */ = {
 			isa = PBXGroup;
 			children = (
+				D9F009EF1BB5224A00FD49F4 /* ChatTableViewController.swift */,
 				D9B33C361BB3436300DB5E15 /* AppDelegate.swift */,
 				D9B33C381BB3436300DB5E15 /* FirstViewController.swift */,
+				D9F009F11BB5235100FD49F4 /* Globals.swift */,
 				D9B33C3C1BB3436300DB5E15 /* Main.storyboard */,
 				D9B33C661BB3533700DB5E15 /* LoginViewController.swift */,
 				D9B33C3F1BB3436300DB5E15 /* Assets.xcassets */,
@@ -326,6 +332,8 @@
 				D9B33C371BB3436300DB5E15 /* AppDelegate.swift in Sources */,
 				D9B33C671BB3533700DB5E15 /* LoginViewController.swift in Sources */,
 				D9B33C391BB3436300DB5E15 /* FirstViewController.swift in Sources */,
+				D9F009F21BB5235100FD49F4 /* Globals.swift in Sources */,
+				D9F009F01BB5224A00FD49F4 /* ChatTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,6 +21,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.delegate = self
         activityIndicator.alpha = 0
         
+        FW_Mobile.session = "PHPSESSID=1moigfojmumjc6khnsv4butvq0"
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,8 +40,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    let FW_IP = "http://108.197.28.233"
-    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -47,22 +48,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if(usernameTextField.hasText() && passwordTextField.hasText()) {
             self.activityIndicator.alpha = 1
-            
-            let headers = [
-                "Host": "108.197.28.233",
-                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:40.0) Gecko/20100101 Firefox/40.0",
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-                "Accept-Language": "en-US,en;q=0.5",
-                "Accept-Encoding": "gzip, deflate",
-                "DNT": "1",
-                "Connection": "keep-alive",
-                "Cookie": ""
-            ]
+        
+            //Can't get Session ID from this, see current development workaround in viewDidLoad()
             
             
-            
-            
-            /*Alamofire.request(.GET, FW_IP+"/", headers: headers)
+            /*Alamofire.request(.GET, FW_Mobile.host+"/", headers: headers)
                 .response { request, response, data, error in
                     
                     
