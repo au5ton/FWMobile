@@ -12,7 +12,6 @@
 		D9B33C391BB3436300DB5E15 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C381BB3436300DB5E15 /* FirstViewController.swift */; };
 		D9B33C3E1BB3436300DB5E15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B33C3C1BB3436300DB5E15 /* Main.storyboard */; };
 		D9B33C401BB3436300DB5E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B33C3F1BB3436300DB5E15 /* Assets.xcassets */; };
-		D9B33C431BB3436300DB5E15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B33C411BB3436300DB5E15 /* LaunchScreen.storyboard */; };
 		D9B33C671BB3533700DB5E15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C661BB3533700DB5E15 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D9CADBE41BB3658900144942 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D9CADBE31BB3658900144942 /* Podfile */; settings = {ASSET_TAGS = (); }; };
 		D9D1A9391BB3695F0035048D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D1A9381BB3695F0035048D /* Alamofire.framework */; };
@@ -40,15 +39,14 @@
 		0EAD675A37622B76503AAD81 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5464006193D4EA7F1C80B685 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B242BC15E8FB2E2F8A4E71E7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D9B33C331BB3436200DB5E15 /* FWMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FWMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B33C331BB3436200DB5E15 /* FW Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FW Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B33C361BB3436300DB5E15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B33C381BB3436300DB5E15 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D9B33C3D1BB3436300DB5E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B33C3F1BB3436300DB5E15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D9B33C421BB3436300DB5E15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9B33C441BB3436300DB5E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D9B33C491BB3436300DB5E15 /* FWMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FWMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9B33C541BB3436300DB5E15 /* FWMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FWMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B33C491BB3436300DB5E15 /* FW Mobile.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FW Mobile.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B33C541BB3436300DB5E15 /* FW Mobile.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FW Mobile.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B33C661BB3533700DB5E15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D9CADBE31BB3658900144942 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D9D1A9381BB3695F0035048D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -115,9 +113,9 @@
 		D9B33C341BB3436200DB5E15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D9B33C331BB3436200DB5E15 /* FWMobile.app */,
-				D9B33C491BB3436300DB5E15 /* FWMobileTests.xctest */,
-				D9B33C541BB3436300DB5E15 /* FWMobileUITests.xctest */,
+				D9B33C331BB3436200DB5E15 /* FW Mobile.app */,
+				D9B33C491BB3436300DB5E15 /* FW Mobile.xctest */,
+				D9B33C541BB3436300DB5E15 /* FW Mobile.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,7 +128,6 @@
 				D9B33C3C1BB3436300DB5E15 /* Main.storyboard */,
 				D9B33C661BB3533700DB5E15 /* LoginViewController.swift */,
 				D9B33C3F1BB3436300DB5E15 /* Assets.xcassets */,
-				D9B33C411BB3436300DB5E15 /* LaunchScreen.storyboard */,
 				D9B33C441BB3436300DB5E15 /* Info.plist */,
 			);
 			path = FWMobile;
@@ -147,9 +144,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D9B33C321BB3436200DB5E15 /* FWMobile */ = {
+		D9B33C321BB3436200DB5E15 /* FW Mobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9B33C5D1BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FWMobile" */;
+			buildConfigurationList = D9B33C5D1BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FW Mobile" */;
 			buildPhases = (
 				0CA76D4014E42F211135CFB2 /* Check Pods Manifest.lock */,
 				D9B33C2F1BB3436200DB5E15 /* Sources */,
@@ -162,14 +159,14 @@
 			);
 			dependencies = (
 			);
-			name = FWMobile;
+			name = "FW Mobile";
 			productName = FWMobile;
-			productReference = D9B33C331BB3436200DB5E15 /* FWMobile.app */;
+			productReference = D9B33C331BB3436200DB5E15 /* FW Mobile.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D9B33C481BB3436300DB5E15 /* FWMobileTests */ = {
+		D9B33C481BB3436300DB5E15 /* FW MobileTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9B33C601BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FWMobileTests" */;
+			buildConfigurationList = D9B33C601BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FW MobileTests" */;
 			buildPhases = (
 				D9B33C451BB3436300DB5E15 /* Sources */,
 				D9B33C461BB3436300DB5E15 /* Frameworks */,
@@ -180,14 +177,14 @@
 			dependencies = (
 				D9B33C4B1BB3436300DB5E15 /* PBXTargetDependency */,
 			);
-			name = FWMobileTests;
+			name = "FW MobileTests";
 			productName = FWMobileTests;
-			productReference = D9B33C491BB3436300DB5E15 /* FWMobileTests.xctest */;
+			productReference = D9B33C491BB3436300DB5E15 /* FW Mobile.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D9B33C531BB3436300DB5E15 /* FWMobileUITests */ = {
+		D9B33C531BB3436300DB5E15 /* FW MobileUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9B33C631BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FWMobileUITests" */;
+			buildConfigurationList = D9B33C631BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FW MobileUITests" */;
 			buildPhases = (
 				D9B33C501BB3436300DB5E15 /* Sources */,
 				D9B33C511BB3436300DB5E15 /* Frameworks */,
@@ -198,9 +195,9 @@
 			dependencies = (
 				D9B33C561BB3436300DB5E15 /* PBXTargetDependency */,
 			);
-			name = FWMobileUITests;
+			name = "FW MobileUITests";
 			productName = FWMobileUITests;
-			productReference = D9B33C541BB3436300DB5E15 /* FWMobileUITests.xctest */;
+			productReference = D9B33C541BB3436300DB5E15 /* FW Mobile.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -225,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D9B33C2E1BB3436200DB5E15 /* Build configuration list for PBXProject "FWMobile" */;
+			buildConfigurationList = D9B33C2E1BB3436200DB5E15 /* Build configuration list for PBXProject "FW Mobile" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -238,9 +235,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D9B33C321BB3436200DB5E15 /* FWMobile */,
-				D9B33C481BB3436300DB5E15 /* FWMobileTests */,
-				D9B33C531BB3436300DB5E15 /* FWMobileUITests */,
+				D9B33C321BB3436200DB5E15 /* FW Mobile */,
+				D9B33C481BB3436300DB5E15 /* FW MobileTests */,
+				D9B33C531BB3436300DB5E15 /* FW MobileUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,7 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9B33C431BB3436300DB5E15 /* LaunchScreen.storyboard in Resources */,
 				D9B33C401BB3436300DB5E15 /* Assets.xcassets in Resources */,
 				D9F101291BB4C4A3005CDE8E /* AUTOMANI.TTF in Resources */,
 				D9CADBE41BB3658900144942 /* Podfile in Resources */,
@@ -352,12 +348,12 @@
 /* Begin PBXTargetDependency section */
 		D9B33C4B1BB3436300DB5E15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D9B33C321BB3436200DB5E15 /* FWMobile */;
+			target = D9B33C321BB3436200DB5E15 /* FW Mobile */;
 			targetProxy = D9B33C4A1BB3436300DB5E15 /* PBXContainerItemProxy */;
 		};
 		D9B33C561BB3436300DB5E15 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D9B33C321BB3436200DB5E15 /* FWMobile */;
+			target = D9B33C321BB3436200DB5E15 /* FW Mobile */;
 			targetProxy = D9B33C551BB3436300DB5E15 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -369,14 +365,6 @@
 				D9B33C3D1BB3436300DB5E15 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D9B33C411BB3436300DB5E15 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9B33C421BB3436300DB5E15 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -470,6 +458,7 @@
 			baseConfigurationReference = 5464006193D4EA7F1C80B685 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -477,7 +466,7 @@
 				INFOPLIST_FILE = FWMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.austinj.FWMobile;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FW Mobile";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -487,6 +476,7 @@
 			baseConfigurationReference = B242BC15E8FB2E2F8A4E71E7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -494,7 +484,7 @@
 				INFOPLIST_FILE = FWMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.austinj.FWMobile;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FW Mobile";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -506,8 +496,8 @@
 				INFOPLIST_FILE = FWMobileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.austinj.FWMobileTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FWMobile.app/FWMobile";
+				PRODUCT_NAME = "FW Mobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FW Mobile.app/FW Mobile";
 			};
 			name = Debug;
 		};
@@ -518,8 +508,8 @@
 				INFOPLIST_FILE = FWMobileTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.austinj.FWMobileTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FWMobile.app/FWMobile";
+				PRODUCT_NAME = "FW Mobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FW Mobile.app/FW Mobile";
 			};
 			name = Release;
 		};
@@ -529,7 +519,7 @@
 				INFOPLIST_FILE = FWMobileUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.austinj.FWMobileUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FW Mobile";
 				TEST_TARGET_NAME = FWMobile;
 				USES_XCTRUNNER = YES;
 			};
@@ -541,7 +531,7 @@
 				INFOPLIST_FILE = FWMobileUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.austinj.FWMobileUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FW Mobile";
 				TEST_TARGET_NAME = FWMobile;
 				USES_XCTRUNNER = YES;
 			};
@@ -550,7 +540,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D9B33C2E1BB3436200DB5E15 /* Build configuration list for PBXProject "FWMobile" */ = {
+		D9B33C2E1BB3436200DB5E15 /* Build configuration list for PBXProject "FW Mobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9B33C5B1BB3436300DB5E15 /* Debug */,
@@ -559,7 +549,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9B33C5D1BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FWMobile" */ = {
+		D9B33C5D1BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FW Mobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9B33C5E1BB3436300DB5E15 /* Debug */,
@@ -568,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9B33C601BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FWMobileTests" */ = {
+		D9B33C601BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FW MobileTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9B33C611BB3436300DB5E15 /* Debug */,
@@ -577,7 +567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9B33C631BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FWMobileUITests" */ = {
+		D9B33C631BB3436300DB5E15 /* Build configuration list for PBXNativeTarget "FW MobileUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9B33C641BB3436300DB5E15 /* Debug */,

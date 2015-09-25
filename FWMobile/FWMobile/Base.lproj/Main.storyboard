@@ -13,7 +13,7 @@
         <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="FWMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="FW_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="FW Mobile" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="214" y="178" width="173" height="244"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Fluff World" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="156" y="178" width="290" height="244"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="173" id="QtM-hG-eIT"/>
                                 </constraints>
@@ -68,7 +68,7 @@
         <!--Login View Controller-->
         <scene sceneID="Uv8-tc-8zD">
             <objects>
-                <viewController id="TCB-RG-w6A" customClass="LoginViewController" customModule="FWMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TCB-RG-w6A" customClass="LoginViewController" customModule="FW_Mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gw6-1w-FPx"/>
                         <viewControllerLayoutGuide type="bottom" id="BZo-Gl-2j2"/>
