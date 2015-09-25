@@ -52,9 +52,9 @@
 		D9B33C661BB3533700DB5E15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D9CADBE31BB3658900144942 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D9D1A9381BB3695F0035048D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		D9F009EF1BB5224A00FD49F4 /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatTableViewController.swift; path = ../ChatTableViewController.swift; sourceTree = "<group>"; };
+		D9F009EF1BB5224A00FD49F4 /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 		D9F009F11BB5235100FD49F4 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
-		D9F101281BB4C4A3005CDE8E /* AUTOMANI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = AUTOMANI.TTF; sourceTree = "<group>"; };
+		D9F101281BB4C4A3005CDE8E /* AUTOMANI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = AUTOMANI.TTF; path = Assets/AUTOMANI.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
