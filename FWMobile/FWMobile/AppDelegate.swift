@@ -8,6 +8,19 @@
 
 import UIKit
 
+public let host = "http://108.197.28.233"
+public var session = ""
+
+/*Alamofire.request(.GET, FW_Mobile.host + "/api/chat_messages.php", headers: ["Cookie": session])
+.responseJSON { response in
+if let JSON = response.2.value {
+print("Response JSON: \(JSON)") //We got the chat messages!
+}
+
+//Next up, populating a TableView
+
+}*/
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
