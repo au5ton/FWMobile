@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="AUTOMANI.TTF">
@@ -22,24 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" text="Fluff World" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="156" y="178" width="290" height="244"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Fluff World" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="156" y="282" width="290" height="37"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="QtM-hG-eIT"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Automania" family="Automania" pointSize="36"/>
                                 <color key="textColor" red="0.20000000000000001" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fluff_paw" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-zB-iyv">
-                                <rect key="frame" x="225" y="110" width="150" height="150"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="eQa-zB-iyv" secondAttribute="height" multiplier="1:1" id="mRi-uD-cq9"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0x-oN-CtQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M0x-oN-CtQ">
                                 <rect key="frame" x="240" y="430" width="120" height="41"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -51,16 +40,20 @@
                                     <segue destination="TCB-RG-w6A" kind="show" identifier="" id="Nff-TW-jmr"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fluff_paw" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-zB-iyv">
+                                <rect key="frame" x="225" y="109" width="150" height="150"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <constraints>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="eQa-zB-iyv" secondAttribute="bottom" constant="-82" id="4TH-SW-Up7"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="M0x-oN-CtQ" secondAttribute="bottom" constant="8" symbolic="YES" id="9SG-e4-gv3"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" constant="1" id="GX1-mh-cFf"/>
-                            <constraint firstItem="eQa-zB-iyv" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="HWs-j5-w09"/>
-                            <constraint firstItem="M0x-oN-CtQ" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="XMc-oc-f9i"/>
-                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="tMU-ks-2qV"/>
-                            <constraint firstItem="M0x-oN-CtQ" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" id="wJm-wT-rQh"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="eQa-zB-iyv" secondAttribute="bottom" constant="23" id="5Vk-JB-YDX"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="7G3-tL-Q3Q"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="M0x-oN-CtQ" secondAttribute="bottom" constant="129" id="7Sw-MK-B6U"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Cvn-cc-8fX"/>
+                            <constraint firstItem="eQa-zB-iyv" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="89" id="MfC-Uf-M87"/>
+                            <constraint firstItem="M0x-oN-CtQ" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="TGp-1m-WWy"/>
+                            <constraint firstItem="eQa-zB-iyv" firstAttribute="centerX" secondItem="M0x-oN-CtQ" secondAttribute="centerX" id="mG6-y1-nG3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bhz-1E-1EO"/>
@@ -81,14 +74,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMH-YQ-tew">
-                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Skip"/>
-                                <connections>
-                                    <segue destination="w8p-ye-TvK" kind="show" id="yoI-e4-uhe"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNq-PL-aIP">
                                 <rect key="frame" x="271" y="49" width="59" height="29"/>
                                 <animations/>
@@ -147,6 +132,14 @@
                                 <rect key="frame" x="327" y="251" width="20" height="20"/>
                                 <animations/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMH-YQ-tew">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <segue destination="w8p-ye-TvK" kind="show" id="yoI-e4-uhe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,6 +148,7 @@
                             <constraint firstItem="zBN-Ai-HGE" firstAttribute="centerX" secondItem="5AW-QM-mQe" secondAttribute="centerX" id="9mp-rp-xro"/>
                             <constraint firstItem="zBN-Ai-HGE" firstAttribute="top" secondItem="hIY-mi-7CE" secondAttribute="bottom" constant="8" id="CMH-MG-fk5"/>
                             <constraint firstItem="uNq-PL-aIP" firstAttribute="centerX" secondItem="5AW-QM-mQe" secondAttribute="centerX" id="O2C-fH-ywC"/>
+                            <constraint firstItem="hMH-YQ-tew" firstAttribute="leading" secondItem="5AW-QM-mQe" secondAttribute="leading" constant="20" id="OJ0-xK-8n8"/>
                             <constraint firstItem="YVy-oE-wBM" firstAttribute="top" secondItem="Srv-T1-Jrd" secondAttribute="bottom" constant="8" symbolic="YES" id="R6G-7d-DwF"/>
                             <constraint firstItem="aFR-ue-BEn" firstAttribute="leading" secondItem="zBN-Ai-HGE" secondAttribute="trailing" constant="8" id="YIt-Mq-f3Y"/>
                             <constraint firstItem="Srv-T1-Jrd" firstAttribute="leading" secondItem="YVy-oE-wBM" secondAttribute="leading" id="Zzp-bh-Zka"/>
@@ -163,6 +157,7 @@
                             <constraint firstItem="aFR-ue-BEn" firstAttribute="top" secondItem="hIY-mi-7CE" secondAttribute="bottom" constant="13" id="cpx-j6-DN9"/>
                             <constraint firstItem="hIY-mi-7CE" firstAttribute="leading" secondItem="l0i-SC-jx0" secondAttribute="leading" id="fkK-Fy-kJb"/>
                             <constraint firstItem="uNq-PL-aIP" firstAttribute="top" secondItem="Gw6-1w-FPx" secondAttribute="bottom" constant="29" id="mhO-Cu-hrv"/>
+                            <constraint firstItem="hMH-YQ-tew" firstAttribute="top" secondItem="Gw6-1w-FPx" secondAttribute="bottom" id="oBj-oZ-H9h"/>
                             <constraint firstItem="Srv-T1-Jrd" firstAttribute="top" secondItem="uNq-PL-aIP" secondAttribute="bottom" constant="37" id="pGS-L3-xRo"/>
                             <constraint firstItem="YVy-oE-wBM" firstAttribute="leading" secondItem="l0i-SC-jx0" secondAttribute="leading" id="u7v-j1-xqK"/>
                             <constraint firstItem="l0i-SC-jx0" firstAttribute="top" secondItem="YVy-oE-wBM" secondAttribute="bottom" constant="8" symbolic="YES" id="wvl-D5-kuN"/>
@@ -176,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r21-l4-c3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218" y="-320"/>
+            <point key="canvasLocation" x="2213" y="-340"/>
         </scene>
         <!--Chat Table View Controller-->
         <scene sceneID="5Vy-wX-GQJ">

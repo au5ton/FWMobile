@@ -12,7 +12,8 @@ import Alamofire
 class ChatTableViewController: UITableViewController {
 
     var chatHistory = ""
-    var historyArray = [String: String]()
+    //don't really know what exact information you're fetching, so I'm guessing it's a String
+    var historyDict = [String: String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ class ChatTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return historyArray.count
+        return historyDict.values.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
