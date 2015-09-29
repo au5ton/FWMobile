@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D98B17C91BBA5B0900B0B34E /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B17C81BBA5B0900B0B34E /* ChatTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D9B33C371BB3436300DB5E15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C361BB3436300DB5E15 /* AppDelegate.swift */; };
 		D9B33C391BB3436300DB5E15 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C381BB3436300DB5E15 /* FirstViewController.swift */; };
 		D9B33C3E1BB3436300DB5E15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B33C3C1BB3436300DB5E15 /* Main.storyboard */; };
 		D9B33C401BB3436300DB5E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B33C3F1BB3436300DB5E15 /* Assets.xcassets */; };
 		D9B33C671BB3533700DB5E15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C661BB3533700DB5E15 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D9CADBE41BB3658900144942 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D9CADBE31BB3658900144942 /* Podfile */; settings = {ASSET_TAGS = (); }; };
-		D9D383EB1BB6317D0056B681 /* ChatCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D383EA1BB6317D0056B681 /* ChatCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		D9F101291BB4C4A3005CDE8E /* AUTOMANI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D9F101281BB4C4A3005CDE8E /* AUTOMANI.TTF */; settings = {ASSET_TAGS = (); }; };
 		EE0DDB195049B3B465623622 /* Pods_FW_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3A301896702B00D7C3C10B /* Pods_FW_Mobile.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -41,6 +41,7 @@
 		5464006193D4EA7F1C80B685 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		56C26D274E435C9ED4F805E0 /* Pods-FW Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FW Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FW Mobile/Pods-FW Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		B242BC15E8FB2E2F8A4E71E7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D98B17C81BBA5B0900B0B34E /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 		D9B33C331BB3436200DB5E15 /* FW Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FW Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B33C361BB3436300DB5E15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B33C381BB3436300DB5E15 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		D9B33C661BB3533700DB5E15 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D9CADBE31BB3658900144942 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D9D1A9381BB3695F0035048D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		D9D383EA1BB6317D0056B681 /* ChatCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewController.swift; sourceTree = "<group>"; };
 		D9F101281BB4C4A3005CDE8E /* AUTOMANI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = AUTOMANI.TTF; path = Assets/AUTOMANI.TTF; sourceTree = "<group>"; };
 		DA6B53732C11E182C0FC3B42 /* Pods-FW Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FW Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-FW Mobile/Pods-FW Mobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +133,7 @@
 				D9B33C381BB3436300DB5E15 /* FirstViewController.swift */,
 				D9B33C661BB3533700DB5E15 /* LoginViewController.swift */,
 				D9B33C3C1BB3436300DB5E15 /* Main.storyboard */,
-				D9D383EA1BB6317D0056B681 /* ChatCollectionViewController.swift */,
+				D98B17C81BBA5B0900B0B34E /* ChatTableViewController.swift */,
 				D9B33C3F1BB3436300DB5E15 /* Assets.xcassets */,
 				D9B33C441BB3436300DB5E15 /* Info.plist */,
 			);
@@ -330,10 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9D383EB1BB6317D0056B681 /* ChatCollectionViewController.swift in Sources */,
 				D9B33C371BB3436300DB5E15 /* AppDelegate.swift in Sources */,
 				D9B33C671BB3533700DB5E15 /* LoginViewController.swift in Sources */,
 				D9B33C391BB3436300DB5E15 /* FirstViewController.swift in Sources */,
+				D98B17C91BBA5B0900B0B34E /* ChatTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
