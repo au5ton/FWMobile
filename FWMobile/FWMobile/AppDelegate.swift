@@ -8,8 +8,17 @@
 
 import UIKit
 
-public let host = "http://108.197.28.233"
+public let host_ip = "108.197.28.233"
+public let host = "http://"+host_ip
 public var session = ""
+public var cookie = ""
+
+struct keys {
+    static let session = "net.austinj.FWMobile.data.session"
+    static let cookie = "net.austinj.FWMobile.data.cookie"
+}
+
+public let defaults = NSUserDefaults.standardUserDefaults()
 
 /*Alamofire.request(.GET, FW_Mobile.host + "/api/chat_messages.php", headers: ["Cookie": session])
 .responseJSON { response in

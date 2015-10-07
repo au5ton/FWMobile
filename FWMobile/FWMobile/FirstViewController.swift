@@ -19,7 +19,7 @@ class FirstViewController: UIViewController {
         let backgroundView = UIImageView(image: background)
         view.addSubview(backgroundView)
         view.sendSubviewToBack(backgroundView)
-    
+        print("\n")
         super.viewDidLoad()
     }
 
