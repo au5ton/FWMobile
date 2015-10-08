@@ -43,6 +43,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
         }
     }
+    
+    //Quick method for repetitive code
     func getNewCookieAndTrySecurityTest() {
         print("getting new cookie AND retrying security test")
         Alamofire.request(.GET, FW_Mobile.host+"/api/get_session_id.php")
@@ -62,14 +64,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         let tapView = UITapGestureRecognizer(target: self, action: "tapView")
         view.addGestureRecognizer(tapView)
-        
         activityIndicator.alpha = 0
         
         
         if let cookie = FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie) {
             print("Cookie already saved: "+cookie)
             FW_Mobile.cookie = cookie
-            print("Login already done.")
+            print("Login already done.") //If there is a cookie already saved locally, it's a previously confirmed to be working one
             self.loginViewTitle.text = "Title ✅"
         }
         else {
@@ -87,6 +88,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             print("Trying to login with credentials:\nUsername:\'\(usernameTextField.text!)\'\nPassword: \'\(passwordTextField.text!)\'")
             self.activityIndicator.alpha = 1
             
+            //Setting up POST request
+            
             let URL = NSURL(string: FW_Mobile.host+"/main_login.php")!
             let mutableUrlRequest = NSMutableURLRequest(URL: URL)
             mutableUrlRequest.HTTPMethod = "POST"
@@ -95,6 +98,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             mutableUrlRequest.HTTPBody = credentials.dataUsingEncoding(NSUTF8StringEncoding)
             
             mutableUrlRequest.addValue("http://108.197.28.233/homepage.php", forHTTPHeaderField: "Referer")
+            
+            //Sending the POST request
             
             Alamofire.request(mutableUrlRequest)
                 .responseJSON { response in
@@ -106,18 +111,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             print("login failed with cookie: \(FW_Mobile.cookie)")
                             self.getNewCookieAndTrySecurityTest()
                             self.activityIndicator.alpha = 0
-                            self.loginViewTitle.text = "Title ❌"
+                            self.loginViewTitle.text = "Title ❌" //Red X for error
                         }
                         else if(response.statusCode == 401) {
                             print("wrong login credentials entered: \(FW_Mobile.cookie)")
                             self.getNewCookieAndTrySecurityTest()
                             self.activityIndicator.alpha = 0
-                            self.loginViewTitle.text = "Title ⚠️"
+                            self.loginViewTitle.text = "Title ⚠️" //Yellow warning for bad credentials
                         }
                         else if(response.statusCode == 302 || response.statusCode == 200) {
                             print("login successful! with cookie: \(FW_Mobile.cookie)")
                             self.activityIndicator.alpha = 0
-                            self.loginViewTitle.text = "Title ✅"
+                            self.loginViewTitle.text = "Title ✅" //Green check for successful login
                             print("Saving new authenticated cookie to NSUserDefaults...")
                             FW_Mobile.defaults.setValue(FW_Mobile.cookie, forKey: FW_Mobile.keys.cookie)
                             print("Saved cookie: "+FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie)!)
@@ -125,13 +130,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         }
                         else {
                             self.activityIndicator.alpha = 0
-                            self.loginViewTitle.text = "Title ❌"
+                            self.loginViewTitle.text = "Title ❌" //Red X for all other situations
                         }
                     }
                     else {
                         print("no response.1")
                         self.activityIndicator.alpha = 0
-                        self.loginViewTitle.text = "Title ❌❌"
+                        self.loginViewTitle.text = "Title ❌❌" //Double red X for no response at all!
                     }
             }
             
