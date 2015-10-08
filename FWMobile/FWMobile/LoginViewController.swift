@@ -15,84 +15,125 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var passwordTextField: UITextField!
-
+    @IBOutlet weak var loginViewTitle: UILabel!
+    
+    func trySecurityTest() {
+        print("trying security test")
+        let headers = [
+            "Cookie": FW_Mobile.cookie,
+            "Referer": "http://108.197.28.233/homepage.php"
+        ]
+        
+        Alamofire.request(.GET, FW_Mobile.host+"/login_redirect.php", headers: headers)
+            .responseJSON { response in
+                //print(response)
+                if let response = response.1 {
+                    print("GET /login_redirect.php \(response.statusCode)")
+                }
+                
+        }
+    }
+    
+    func getNewCookie() {
+        print("getting new cookie")
+        Alamofire.request(.GET, FW_Mobile.host+"/api/get_session_id.php")
+            .responseJSON { response in
+                if let session = response.2.value {
+                    FW_Mobile.cookie = "PHPSESSID="+(session as! String)
+                    FW_Mobile.defaults.setValue(FW_Mobile.cookie, forKey: FW_Mobile.keys.cookie)
+                    print("Saved cookie: "+FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie)!)
+                }
+        }
+    }
+    func getNewCookieAndTrySecurityTest() {
+        print("getting new cookie AND retrying security test")
+        Alamofire.request(.GET, FW_Mobile.host+"/api/get_session_id.php")
+            .responseJSON { response in
+                if let session = response.2.value {
+                    FW_Mobile.cookie = "PHPSESSID="+(session as! String)
+                    FW_Mobile.defaults.setValue(FW_Mobile.cookie, forKey: FW_Mobile.keys.cookie)
+                    print("Saved cookie: "+FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie)!)
+                    self.trySecurityTest()
+                }
+                else {
+                    print("Session cookie not received from server")
+                }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let tapView = UITapGestureRecognizer(target: self, action: "tapView")
         view.addGestureRecognizer(tapView)
         
-        usernameTextField.delegate = self
         activityIndicator.alpha = 0
         
-        if let cookie = FW_Mobile.defaults.stringForKey(FW_Mobile.keys.session) {
+        
+        if let cookie = FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie) {
             print("Cookie already saved: "+cookie)
             FW_Mobile.cookie = cookie
+            getNewCookieAndTrySecurityTest()
         }
         else {
             print("Cookie not saved, generating a new one.")
-            Alamofire.request(.GET, FW_Mobile.host+"/api/get_session_id.php")
-                .responseString { response in
-                    //print("Response String: \(response)")
-                }
-                .responseJSON { response in
-                    //print("Response JSON: \()")
-                    if let session = response.2.value {
-                        FW_Mobile.cookie = "PHPSESSID="+(session as! String)
-                        FW_Mobile.session = (session as! String)
-                        FW_Mobile.defaults.setValue(FW_Mobile.session, forKey: FW_Mobile.keys.session)
-                        FW_Mobile.defaults.setValue(FW_Mobile.cookie, forKey: FW_Mobile.keys.cookie)
-                        print("Saved session: "+FW_Mobile.defaults.stringForKey(FW_Mobile.keys.session)!)
-                        print("Saved cookie: "+FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie)!)
-                    }
-            }
+            getNewCookieAndTrySecurityTest()
         }
-    
+        
+        
+        
     }
     
     @IBAction func loginButtonPressed(sender: UIButton) {
         
         if usernameTextField.hasText() && passwordTextField.hasText() {
-            print("Trying to login with credentials...")
+            print("Trying to login with credentials:\nUsername:\'\(usernameTextField.text!)\'\nPassword: \'\(passwordTextField.text!)\'")
             self.activityIndicator.alpha = 1
             
-            var defaultHeaders = Alamofire.Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders ?? [:]
-            defaultHeaders["Cookie"] = FW_Mobile.cookie
+            let URL = NSURL(string: FW_Mobile.host+"/main_login.php")!
+            let mutableUrlRequest = NSMutableURLRequest(URL: URL)
+            mutableUrlRequest.HTTPMethod = "POST"
             
-            let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-            configuration.HTTPAdditionalHeaders = defaultHeaders
+            let credentials = "myusername=\(usernameTextField.text!)&mypassword=\(passwordTextField.text!)&Submit=Login"
+            mutableUrlRequest.HTTPBody = credentials.dataUsingEncoding(NSUTF8StringEncoding)
             
-            let manager = Alamofire.Manager(configuration: configuration)
+            mutableUrlRequest.addValue("http://108.197.28.233/homepage.php", forHTTPHeaderField: "Referer")
             
-            let credentials = [
-                "myusername": usernameTextField.text!,
-                "mypassword": passwordTextField.text!,
-                "Submit":"Login"
-            ]
-            
-            manager.request(.POST, FW_Mobile.host+"/main_login.php", parameters: credentials)
+            Alamofire.request(mutableUrlRequest)
                 .responseJSON { response in
                     
-                    if let response = response.0 {
-                        print(response)
-                    }
-                    else {
-                        print("no response.0")
-                    }
                     if let response = response.1 {
-                        print(response)
-                        print("Status code: \(response.statusCode)")
+                        print("POST /main_login.php \(response.statusCode)")
+                        //print("Status code: \(response.statusCode)")
+                        if(response.statusCode == 404) {
+                            print("login failed with cookie: \(FW_Mobile.cookie)")
+                            self.getNewCookieAndTrySecurityTest()
+                            self.activityIndicator.alpha = 0
+                            self.loginViewTitle.text = "Title ❌"
+                        }
+                        else if(response.statusCode == 401) {
+                            print("wrong login credentials entered: \(FW_Mobile.cookie)")
+                            self.getNewCookieAndTrySecurityTest()
+                            self.activityIndicator.alpha = 0
+                            self.loginViewTitle.text = "Title ⚠️"
+                        }
+                        else if(response.statusCode == 302 || response.statusCode == 200) {
+                            print("login successful! with cookie: \(FW_Mobile.cookie)")
+                            self.activityIndicator.alpha = 0
+                            self.loginViewTitle.text = "Title ✅"
+                        }
+                        else {
+                            self.activityIndicator.alpha = 0
+                            self.loginViewTitle.text = "Title ❌"
+                        }
                     }
                     else {
                         print("no response.1")
-                    }
-                    if let response = response.2.value {
-                        print(response)
-                    }
-                    else {
-                        print("no response.2")
+                        self.activityIndicator.alpha = 0
+                        self.loginViewTitle.text = "Title ❌❌"
                     }
             }
+            
         }
         print("login pressed")
     }

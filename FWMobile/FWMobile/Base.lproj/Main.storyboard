@@ -170,6 +170,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="aFR-ue-BEn" id="50I-xh-30p"/>
+                        <outlet property="loginViewTitle" destination="uNq-PL-aIP" id="CdT-3V-Tef"/>
                         <outlet property="passwordTextField" destination="hIY-mi-7CE" id="OWA-rK-ayQ"/>
                         <outlet property="usernameTextField" destination="YVy-oE-wBM" id="sWQ-0d-9td"/>
                     </connections>

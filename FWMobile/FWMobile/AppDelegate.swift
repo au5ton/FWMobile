@@ -8,14 +8,13 @@
 
 import UIKit
 
-public let host_ip = "108.197.28.233"
-public let host = "http://"+host_ip
-public var session = ""
-public var cookie = ""
+public let host_ip: String = "108.197.28.233"
+public let host: String = "http://"+host_ip
+public var cookie: String = ""
 
 struct keys {
-    static let session = "net.austinj.FWMobile.data.session"
-    static let cookie = "net.austinj.FWMobile.data.cookie"
+    static let session: String = "net.austinj.FWMobile.data.session"
+    static let cookie: String = "net.austinj.FWMobile.data.cookie"
 }
 
 public let defaults = NSUserDefaults.standardUserDefaults()
