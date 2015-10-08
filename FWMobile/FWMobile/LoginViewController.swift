@@ -40,8 +40,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             .responseJSON { response in
                 if let session = response.2.value {
                     FW_Mobile.cookie = "PHPSESSID="+(session as! String)
-                    FW_Mobile.defaults.setValue(FW_Mobile.cookie, forKey: FW_Mobile.keys.cookie)
-                    print("Saved cookie: "+FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie)!)
                 }
         }
     }
@@ -51,8 +49,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             .responseJSON { response in
                 if let session = response.2.value {
                     FW_Mobile.cookie = "PHPSESSID="+(session as! String)
-                    FW_Mobile.defaults.setValue(FW_Mobile.cookie, forKey: FW_Mobile.keys.cookie)
-                    print("Saved cookie: "+FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie)!)
                     self.trySecurityTest()
                 }
                 else {
@@ -73,7 +69,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if let cookie = FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie) {
             print("Cookie already saved: "+cookie)
             FW_Mobile.cookie = cookie
-            getNewCookieAndTrySecurityTest()
+            print("Login already done.")
+            self.loginViewTitle.text = "Title ✅"
         }
         else {
             print("Cookie not saved, generating a new one.")
@@ -121,6 +118,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                             print("login successful! with cookie: \(FW_Mobile.cookie)")
                             self.activityIndicator.alpha = 0
                             self.loginViewTitle.text = "Title ✅"
+                            print("Saving new authenticated cookie to NSUserDefaults...")
+                            FW_Mobile.defaults.setValue(FW_Mobile.cookie, forKey: FW_Mobile.keys.cookie)
+                            print("Saved cookie: "+FW_Mobile.defaults.stringForKey(FW_Mobile.keys.cookie)!)
+                            
                         }
                         else {
                             self.activityIndicator.alpha = 0
