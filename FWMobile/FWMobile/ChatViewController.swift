@@ -30,7 +30,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell  = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell!
-        cell.textLabel?.text = array[indexPath.row]
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        //cell.textLabel?.text = array[indexPath.row]
         return cell
     }
     

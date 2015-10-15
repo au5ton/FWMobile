@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D98B17C91BBA5B0900B0B34E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B17C81BBA5B0900B0B34E /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D997DE131BCF34A30076E749 /* ChatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997DE121BCF34A30076E749 /* ChatMessageView.swift */; settings = {ASSET_TAGS = (); }; };
 		D9B33C371BB3436300DB5E15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C361BB3436300DB5E15 /* AppDelegate.swift */; };
 		D9B33C391BB3436300DB5E15 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C381BB3436300DB5E15 /* FirstViewController.swift */; };
 		D9B33C3E1BB3436300DB5E15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B33C3C1BB3436300DB5E15 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		56C26D274E435C9ED4F805E0 /* Pods-FW Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FW Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FW Mobile/Pods-FW Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		B242BC15E8FB2E2F8A4E71E7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D98B17C81BBA5B0900B0B34E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D997DE121BCF34A30076E749 /* ChatMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageView.swift; sourceTree = "<group>"; };
 		D9B33C331BB3436200DB5E15 /* FW Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FW Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B33C361BB3436300DB5E15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B33C381BB3436300DB5E15 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		D9B33C351BB3436300DB5E15 /* FWMobile */ = {
 			isa = PBXGroup;
 			children = (
+				D997DE121BCF34A30076E749 /* ChatMessageView.swift */,
 				D9B33C361BB3436300DB5E15 /* AppDelegate.swift */,
 				D9B33C381BB3436300DB5E15 /* FirstViewController.swift */,
 				D9B33C661BB3533700DB5E15 /* LoginViewController.swift */,
@@ -330,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D997DE131BCF34A30076E749 /* ChatMessageView.swift in Sources */,
 				D9B33C371BB3436300DB5E15 /* AppDelegate.swift in Sources */,
 				D9B33C671BB3533700DB5E15 /* LoginViewController.swift in Sources */,
 				D9B33C391BB3436300DB5E15 /* FirstViewController.swift in Sources */,
