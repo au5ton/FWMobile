@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D98B17C91BBA5B0900B0B34E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B17C81BBA5B0900B0B34E /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		D997DE131BCF34A30076E749 /* ChatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997DE121BCF34A30076E749 /* ChatMessageView.swift */; settings = {ASSET_TAGS = (); }; };
+		D98B17C91BBA5B0900B0B34E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B17C81BBA5B0900B0B34E /* ChatViewController.swift */; };
+		D997DE131BCF34A30076E749 /* ChatMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D997DE121BCF34A30076E749 /* ChatMessageView.swift */; };
 		D9B33C371BB3436300DB5E15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C361BB3436300DB5E15 /* AppDelegate.swift */; };
 		D9B33C391BB3436300DB5E15 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C381BB3436300DB5E15 /* FirstViewController.swift */; };
 		D9B33C3E1BB3436300DB5E15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B33C3C1BB3436300DB5E15 /* Main.storyboard */; };
 		D9B33C401BB3436300DB5E15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B33C3F1BB3436300DB5E15 /* Assets.xcassets */; };
-		D9B33C671BB3533700DB5E15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C661BB3533700DB5E15 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		D9CADBE41BB3658900144942 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D9CADBE31BB3658900144942 /* Podfile */; settings = {ASSET_TAGS = (); }; };
-		D9F101291BB4C4A3005CDE8E /* AUTOMANI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D9F101281BB4C4A3005CDE8E /* AUTOMANI.TTF */; settings = {ASSET_TAGS = (); }; };
+		D9B33C671BB3533700DB5E15 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B33C661BB3533700DB5E15 /* LoginViewController.swift */; };
+		D9CADBE41BB3658900144942 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D9CADBE31BB3658900144942 /* Podfile */; };
+		D9F101291BB4C4A3005CDE8E /* AUTOMANI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D9F101281BB4C4A3005CDE8E /* AUTOMANI.TTF */; };
 		EE0DDB195049B3B465623622 /* Pods_FW_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3A301896702B00D7C3C10B /* Pods_FW_Mobile.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 

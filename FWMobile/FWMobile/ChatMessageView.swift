@@ -26,6 +26,10 @@ class ChatMessageView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        let profilePic = UIImageView(frame: CGRectMake(0, 0, 80, 80));
+        let image = UIImage(named: "default.jpg")
+        profilePic.image = image
+        
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         button.backgroundColor = UIColor.redColor()
         
@@ -33,12 +37,12 @@ class ChatMessageView: UIView {
         
         ratingButtons += [button]
         
-        addSubview(button)
+        addSubview(profilePic)
         
     }
     
     override func intrinsicContentSize() -> CGSize {
-        return CGSize(width: 300, height: 65.5)
+        return CGSize(width: 300, height: 80)
     }
     
     override func layoutSubviews() {
