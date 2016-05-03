@@ -1,2 +1,2 @@
 # FWMobile
-FW iOS app
+Fluff World cordova app
