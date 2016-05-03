@@ -1,0 +1,28 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "net.cordova.hellocordova"
+        },
+        "cordova-plugin-http": {
+            "PACKAGE_NAME": "net.austinj.FluffWorld"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "net.austinj.FluffWorld"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "net.austinj.FluffWorld"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "net.austinj.FluffWorld"
+        }
+    }
+}
